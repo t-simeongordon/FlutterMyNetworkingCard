@@ -122,67 +122,150 @@ class MiCardApp extends StatelessWidget{
           //     ),
           //   ],
           // ),
+
+          // //** test for Card view and ListTile - main
+          // child: Column(
+          //   verticalDirection: VerticalDirection.down,
+          //   mainAxisAlignment: MainAxisAlignment.center,
+          //   children: <Widget>[
+          //     CircleAvatar(
+          //       radius: 50,
+          //       backgroundImage: AssetImage("images/default_icon_girl.jpg"),
+          //     ),
+          //     Text("name",
+          //       style: TextStyle(
+          //           color: Colors.white,
+          //           fontFamily: 'HachiMaruPop',
+          //           fontSize: 30,
+          //           fontWeight: FontWeight.bold),
+          //     ),
+          //     Text("description",
+          //       style: TextStyle(
+          //           color: Colors.teal.shade200,
+          //           fontFamily: 'NotoSerif',
+          //           fontSize: 30,
+          //           fontWeight: FontWeight.bold,
+          //           letterSpacing: 2.5,
+          //       ),
+          //     ),
+          //     SizedBox(
+          //       height: 20,
+          //       width: 100,
+          //       child: Divider(
+          //         color: Colors.white,
+          //         thickness: 2,
+          //       ),
+          //     ),
+          //     Card(
+          //       color: Colors.white,
+          //       margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
+          //       child:  ListTile(
+          //         leading: Icon(
+          //           Icons.add_call,
+          //         ),
+          //         title: Text(
+          //           "+44 09865567889",
+          //           style: TextStyle(
+          //             fontWeight: FontWeight.bold,
+          //             color: Colors.deepOrange,
+          //           ),
+          //         ),
+          //       ),
+          //     ),
+          //     Card(
+          //       color: Colors.white,
+          //       margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
+          //       child: ListTile(
+          //         leading: Icon(Icons.alternate_email),
+          //         title: Text("ddd@gmail.com",
+          //           style: TextStyle(
+          //             fontWeight: FontWeight.bold,
+          //             color: Colors.deepOrange,
+          //           ),
+          //         ),
+          //       ),
+          //     )
+          //   ],
+          // ),
           child: Column(
-            verticalDirection: VerticalDirection.down,
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               CircleAvatar(
-                radius: 50,
-                backgroundImage: AssetImage("images/default_icon_girl.jpg"),
+                backgroundImage: AssetImage('images/default_icon_girl.jpg'),
+                radius: 100,
               ),
-              Text("name",
+              Text('Name',
+
                 style: TextStyle(
-                    color: Colors.white,
-                    fontFamily: 'HachiMaruPop',
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold),
+                  letterSpacing: 2,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white,
+                  fontSize: 50,
+                ),
               ),
-              Text("description",
+              Text('Description',
                 style: TextStyle(
-                    color: Colors.teal.shade200,
-                    fontFamily: 'NotoSerif',
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    letterSpacing: 2.5,
+                  color: Colors.teal.shade200,
+                  letterSpacing: 2,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 30,
                 ),
               ),
               SizedBox(
-                height: 20,
-                width: 100,
+                width: 90,
                 child: Divider(
-                  color: Colors.white,
                   thickness: 2,
+                  color: Colors.white,
                 ),
               ),
-              Card(
-                color: Colors.white,
-                margin: EdgeInsets.fromLTRB(20, 20, 20, 20),
-                child:  ListTile(
-                  leading: Icon(
-                    Icons.add_call,
-                  ),
-                  title: Text(
-                    "+44 09865567889",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.deepOrange,
+              Column(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(110, 10, 110, 0),
+                    child: Card(
+                      color: Colors.white,
+                      child: Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.add_call,color: Colors.amber,
+                            size: 25,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text('+44 777789909988',
+                            style: TextStyle(
+                              color: Colors.amber,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
-                ),
+                  Padding(
+                    padding: EdgeInsets.fromLTRB(110, 20, 110, 0),
+                    child: Card(
+                      color: Colors.white,
+                      child: Row(
+                        children: <Widget>[
+                          Icon(
+                            Icons.email_outlined,color: Colors.amber,
+                            size: 25,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Text('hhh@gmail.com',
+                            style: TextStyle(
+                              color: Colors.amber,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              Card(
-                color: Colors.white,
-                margin: EdgeInsets.fromLTRB(20, 0, 20, 20),
-                child: ListTile(
-                  leading: Icon(Icons.alternate_email),
-                  title: Text("ddd@gmail.com",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      color: Colors.deepOrange,
-                    ),
-                  ),
-                ),
-              )
             ],
           ),
         ),
